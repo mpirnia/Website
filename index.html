@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Electric and Sustainable Aviation Research - University of Waterloo">
+    <title>Electric and Sustainable Aviation Research | University of Waterloo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Electric Aviation Research</a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="publications.html" class="nav-link">Dissemination</a></li>
+                <li><a href="team-members.html" class="nav-link">Team Members</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Electric and Sustainable Aviation Research</h1>
+            <p class="hero-institution">University of Waterloo</p>
+            <p class="tagline">Advancing Electric Aircraft Technology for Canadian Aviation</p>
+            <div class="hero-image-placeholder">
+                <span>[Hero Image: Electric Aircraft / Research Visualization]</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="research.html" class="btn btn-primary">Explore Research</a>
+                <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                <button type="button" class="btn btn-media-popup" id="media-popup-trigger">Latest from Media</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media popup -->
+    <div class="modal-overlay" id="media-popup" aria-hidden="true">
+        <div class="modal modal-media" role="dialog" aria-labelledby="media-popup-title">
+            <button type="button" class="modal-close" id="media-popup-close" aria-label="Close">&times;</button>
+            <h2 class="modal-title" id="media-popup-title">Latest from Media</h2>
+            <p class="modal-subtitle">Recent WISA blog and news</p>
+
+            <div class="modal-featured-blog">
+                <span class="modal-featured-label">Latest WISA blog</span>
+                <a href="https://uwaterloo.ca/sustainable-aeronautics/blog/international-e-plane-flight-vancouver-betas-alia-visit" class="modal-featured-title" target="_blank" rel="noopener noreferrer">International e-plane flight to Vancouver: Beta's ALIA visit</a>
+                <p class="modal-featured-meta">Parker, P. (2025) · Waterloo Institute for Sustainable Aeronautics</p>
+                <p class="modal-featured-desc">Beta Technologies' ALIA CX300 e-plane visit to Vancouver and WISA research on route networks for e-plane operations.</p>
+                <a href="https://uwaterloo.ca/sustainable-aeronautics/blog/international-e-plane-flight-vancouver-betas-alia-visit" class="modal-featured-cta" target="_blank" rel="noopener noreferrer">Read post →</a>
+            </div>
+
+            <p class="modal-more-heading">More from media</p>
+            <div class="modal-media-list">
+                <div class="modal-media-item">
+                    <h3><a href="https://uwaterloo.ca/news/wisa-helps-electric-planes-take" target="_blank" rel="noopener noreferrer">WISA helps electric planes take off</a></h3>
+                    <p class="modal-media-meta">Waterloo News, February 26, 2025</p>
+                </div>
+                <div class="modal-media-item">
+                    <h3><a href="wisa-blogs.html">All WISA blogs</a></h3>
+                    <p class="modal-media-meta">Waterloo Institute for Sustainable Aeronautics</p>
+                </div>
+            </div>
+            <p class="modal-footer-link"><a href="media.html">View all media &rarr;</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>University of Waterloo</p>
+            <p class="footer-links">
+                <a href="index.html">Home</a> |
+                <a href="about.html">About</a> |
+                <a href="research.html">Research</a> |
+                <a href="publications.html">Dissemination</a> |
+                <a href="team-members.html">Team Members</a> |
+                <a href="contact.html">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

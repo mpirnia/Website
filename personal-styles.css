@@ -1,0 +1,444 @@
+/* Personal Website - Dr. Mehrdad Pirnia - Green Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #1b5e20;
+    --primary-dark: #0d3d12;
+    --accent-green: #2e7d32;
+    --accent-light: #43a047;
+    --accent-pale: #66bb6a;
+    --accent-muted: #a5d6a7;
+    --text-dark: #1a2e1a;
+    --text-light: #3d5c3d;
+    --bg-light: #e8f5e9;
+    --bg-white: #ffffff;
+    --bg-cream: #f1f8e9;
+    --border-color: #c8e6c9;
+    --shadow: 0 2px 10px rgba(27, 94, 32, 0.12);
+    --shadow-hover: 0 4px 20px rgba(27, 94, 32, 0.18);
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo a {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-logo a:hover {
+    color: var(--accent-light);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-green);
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--accent-green);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--accent-green);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    transition: var(--transition);
+}
+
+/* Hero / Home Section */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 120px 20px 80px;
+    background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary-green) 40%, var(--accent-green) 100%);
+    color: var(--bg-white);
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hero-text h1 {
+    font-size: 2.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+}
+
+.hero-text .hero-institution {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+/* Bio Section */
+.bio-section {
+    padding: 60px 0;
+}
+
+.bio-content {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.bio-photo-container {
+    flex-shrink: 0;
+}
+
+.bio-photo {
+    width: 260px;
+    height: 260px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 4px solid var(--accent-green);
+    box-shadow: var(--shadow-hover);
+}
+
+.bio-photo-placeholder {
+    width: 260px;
+    height: 260px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--border-color) 100%);
+    border: 3px dashed var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.bio-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.bio-text h2 {
+    font-size: 1.75rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.bio-text p {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.bio-text ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+/* News Section */
+.news-section {
+    padding: 60px 0 80px;
+    background-color: var(--bg-light);
+}
+
+.news-section h2 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.news-item {
+    background: var(--bg-white);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-green);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.news-item:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.news-item a {
+    color: var(--primary-green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+.news-meta {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.35rem;
+}
+
+/* Page content */
+.page-content {
+    padding-top: 80px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-alt {
+    background-color: var(--bg-light);
+}
+
+.section-title {
+    font-size: 2.25rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Research overview cards */
+.research-overview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.research-overview-card {
+    display: block;
+    padding: 2rem;
+    background-color: var(--bg-white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border: 2px solid var(--border-color);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.research-overview-card:hover {
+    border-color: var(--accent-green);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+.research-overview-card h3 {
+    font-size: 1.35rem;
+    color: var(--primary-green);
+    margin-bottom: 0.75rem;
+}
+
+.research-overview-card p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.research-overview-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+/* Publications */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.publication-item {
+    background-color: var(--bg-white);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent-green);
+}
+
+.publication-item h3 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+.publication-authors, .publication-venue {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.publication-links a {
+    color: var(--accent-green);
+    font-size: 0.9rem;
+}
+
+/* Sub-pages (electricity market, etc.) */
+.subsection-title {
+    font-size: 1.75rem;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--accent-green);
+}
+
+.back-link {
+    margin-bottom: 1rem;
+}
+.back-link a {
+    color: var(--accent-green);
+    font-weight: 600;
+    text-decoration: none;
+}
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-green);
+    color: var(--bg-white);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-links a {
+    color: var(--bg-white);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--accent-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--bg-white);
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+        gap: 0;
+        box-shadow: var(--shadow);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .research-overview-cards {
+        grid-template-columns: 1fr;
+    }
+}

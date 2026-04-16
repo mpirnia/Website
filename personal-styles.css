@@ -558,14 +558,23 @@ body {
 
 .publication-links a {
     color: #333;
-    font-size: 0.85rem;
+    font-size: 0;
     text-decoration: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+    border-bottom: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+.publication-links a::after {
+    content: "Paper";
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.22);
 }
 
 .publication-links a:hover {
     color: #000;
+}
+
+.publication-links a:hover::after {
     border-bottom-color: rgba(0, 0, 0, 0.45);
 }
 

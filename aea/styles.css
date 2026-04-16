@@ -57,8 +57,9 @@ body {
 }
 
 .nav-logo a {
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     color: var(--primary-color);
     text-decoration: none;
     transition: var(--transition);
@@ -148,29 +149,39 @@ body {
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2.1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    margin-bottom: 0.45rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .hero-institution {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    opacity: 0.95;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
+    opacity: 0.92;
 }
 
 .professor-title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     margin-bottom: 1rem;
     opacity: 0.95;
 }
 
 .tagline {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    font-style: italic;
-    opacity: 0.9;
+    font-size: 0.98rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    max-width: 32rem;
+    margin: 0 auto 1.75rem;
+    opacity: 0.88;
 }
 
 .hero-image-placeholder {
@@ -465,17 +476,24 @@ body {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0.55rem;
     text-align: center;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
 }
 
 .section-subtitle {
     text-align: center;
-    color: var(--text-light);
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
+    color: rgba(0, 0, 0, 0.52);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.55;
+    max-width: 36rem;
+    margin: 0 auto 2.25rem;
+    letter-spacing: 0.01em;
 }
 
 /* About Section */
@@ -488,9 +506,14 @@ body {
 }
 
 .about-text h3 {
-    font-size: 1.75rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border-color);
+    letter-spacing: 0.02em;
 }
 
 .about-quote {
@@ -540,16 +563,19 @@ body {
 
 .team-section h3,
 .team-section-heading {
-    font-size: 1.75rem;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1.25rem;
     text-align: center;
+    letter-spacing: 0.02em;
 }
 
 .team-section-heading {
-    margin-top: 3rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid var(--accent-color);
+    margin-top: 2.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
     text-align: left;
 }
 
@@ -692,11 +718,14 @@ body {
 }
 
 .subsection-title {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid var(--accent-color);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    letter-spacing: 0.02em;
 }
 
 /* Research overview cards (research.html landing) */
@@ -735,8 +764,10 @@ body {
 }
 
 .research-overview-card .subsection-title {
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1rem;
 }
 
 .research-overview-card .placeholder-text {
@@ -1033,11 +1064,11 @@ body {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 1.75rem;
     }
 
     .hero-institution {
-        font-size: 1.25rem;
+        font-size: 0.95rem;
     }
 
     .hero-image-placeholder {
@@ -1061,11 +1092,11 @@ body {
     }
 
     .tagline {
-        font-size: 1.1rem;
+        font-size: 0.92rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.25rem;
     }
 
     .professor-photo-container {
@@ -1103,11 +1134,19 @@ body {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.55rem;
     }
 
     .hero-institution {
-        font-size: 1.1rem;
+        font-size: 0.88rem;
+    }
+
+    .tagline {
+        font-size: 0.88rem;
+    }
+
+    .section-title {
+        font-size: 1.15rem;
     }
 
     .hero-image-placeholder {
@@ -1120,7 +1159,7 @@ body {
     }
 
     .subsection-title {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .home-tile {

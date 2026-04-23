@@ -337,6 +337,11 @@ body {
     line-height: 1.35;
 }
 
+.talks-numbered-list {
+    list-style: decimal;
+    padding-left: 1.4rem;
+}
+
 .course-description-details {
     margin-top: 0.65rem;
     border: none;
